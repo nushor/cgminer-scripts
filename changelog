@@ -1,0 +1,26 @@
+cgminer (2.3.6-2) stable; urgency=low
+  Version 2.3.6-2 - May 2, 2012
+  - Various bug fixes, latest build from repository.
+
+ -- nushor <nushor11@gmail.com> Wed, 02 May 2012 18:17:49 -0500
+
+cgminer (2.3.6-1) stable; urgency=low
+
+  Version 2.3.6 - April 29, 2012
+  - Shorten stale share messages slightly.
+  - Protect the freeing of current_hash under mutex_lock to prevent racing on it
+    when set_curblock is hit concurrently.
+  - Change default behaviour to submitting stale, removing the --submit-stale
+    option and adding a --no-submit-stale option.
+  - Make sure to start the getwork and submit threads when a pool is added on the
+    fly. This fixes a crash when a pool is added to running cgminer and then
+    switched to.
+  - Faster hardware can easily outstrip the speed we can get work and submit
+    shares when using only one connection per pool.
+  - Test the queued list to see if any get/submits are already queued and if they
+    are, start recruiting extra connections by generating new threads.
+  - This allows us to reuse network connections at low loads but recuit new open
+    connections as they're needed, so that cgminer can scale to hardware of any
+    size.
+
+ -- nushor <nushor11@gmail.com>  Tue, 01 May 2012 13:26:09 -0500

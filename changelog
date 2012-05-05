@@ -1,3 +1,12 @@
+cgminer (2.4.0-2) stable; urgency=low
+  Version 2.4.0-2 - May 4, 2012
+
+  - Fix the benchmark feature by bypassing the new networking code.
+  - Reset sequential reject counter after a pool is disabled for when it is re-enabled.
+  - Don't try to reap curls if benchmarking is enabled.
+
+ -- nushor <nushor11@gmail.com>  Thurs, 03 May 2012 23:18:42 -0500
+
 cgminer (2.4.0-1) stable; urgency=low
   Version 2.4.0 - May 3, 2012
 
@@ -41,6 +50,18 @@ cgminer (2.4.0-1) stable; urgency=low
     submit them and they've become stale in the interim.
 
  -- nushor <nushor11@gmail.com>  Thurs, 03 May 2012 10:43:22 -0500
+
+cgminer (2.3.6-3) stable; urgency=low
+  Version 2.3.6-3 - may 3, 2012
+  - More bug fixes, Pre 2.4.1 release.
+
+ -- nushor <nushor11@gmail.com>  Thurs, 03 May 2012 00:36:50 -0500
+
+cgminer (2.3.6-2) stable; urgency=low
+  Version 2.3.6-2 - May 2, 2012
+  - Various bug fixes, latest build from repository.
+
+ -- nushor <nushor11@gmail.com>  Wed, 02 May 2012 18:17:49 -0500
 
 cgminer (2.3.6-1) stable; urgency=low
 
